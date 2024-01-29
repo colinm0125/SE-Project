@@ -180,6 +180,9 @@
              default="checkstyle-xpath-suppressions.xml" />
       <property name="optional" value="true"/>
     </module>
+    <module name="CommentsIndentation">
+      <property name="tokens" value="SINGLE_LINE_COMMENT, BLOCK_COMMENT_BEGIN"/>
+    </module>
     <module name="SuppressWarningsHolder" />
     <module name="SuppressionCommentFilter">
       <property name="offCommentFormat" value="CHECKSTYLE.OFF\: ([\w\|]+)" />
