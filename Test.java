@@ -1,6 +1,6 @@
 class Test{
   public static void main(String[] args){
-      //BAD COMMENT
+    //Good comment check
     System.out.println("Hello World!");
   }
 }
