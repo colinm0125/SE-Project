@@ -3,4 +3,5 @@ public interface DataToFromCompute {
     SourceType readData();    
     //A method to write to the output source
     DataKey writeData(SourceType Source);
+    
 }
