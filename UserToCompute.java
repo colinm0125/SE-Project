@@ -13,5 +13,5 @@ public interface UserToCompute {
     SourceType getOutput();
 
     //Comutes and returns the data based off of compute engine
-    ComputeResults computeRequest(RawData input)
+    ComputeResults computeRequest(RawData input);
 }
