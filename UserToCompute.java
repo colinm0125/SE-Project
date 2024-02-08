@@ -6,12 +6,12 @@ public interface UserToCompute {
     OutputDest setOutputDest(OutputDest dest);
 
     //Method to set custom delimeters
+    //Possible method overloading in future
     UserDelimeter setDelimeter(UserDelimeter inputDelim, UserDelimeter outputDelim);
 
     //Method to call the computation prime summations
     SourceType getOutput();
 
+    //Comutes and returns the data based off of compute engine
+    ComputeResults computeRequest(RawData input);
 }
-
-//A method to read whatever input source with the integer
-//A method to write the computed Prime Summation to the output destination
