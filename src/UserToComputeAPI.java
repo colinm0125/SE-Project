@@ -2,9 +2,20 @@ public class UserToComputeAPI implements UserToCompute{
     //Object instances
     SourceType source;
     OutputDest dest;
-    UserDelimeter inputDelim;
-    UserDelimeter outputDelim;
+    UserDelimeter inputDelim, outputDelim;
     RawData input;
+
+    //Constructors
+    public UserToComputeAPI(SourceType source, OutputDest dest, UserDelimeter inputDelim, UserDelimeter outputDelim, RawData input) {
+        this.source = source;
+        this.dest = dest;
+        this.inputDelim = inputDelim;
+        this.outputDelim = outputDelim;
+        this.input = input;
+    }
+    public UserToComputeAPI() {
+
+    }
 
     //Method to set input source
     public SourceType setInputSource(SourceType source) {
