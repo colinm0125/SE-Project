@@ -1,4 +1,4 @@
-public class ComputeEngine implements ComputeEngineAPI{
+public class ComputeEngineAPI implements ComputeEngine{
     //Object instances
     RawData data;
 
