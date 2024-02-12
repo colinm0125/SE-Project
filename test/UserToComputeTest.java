@@ -3,7 +3,7 @@ import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.any;
 
 
-public class UserToComputeTest implements UserToCompute{
+public class UserToComputeTest implements UserToCompute {
     public void testUserToCompute(){
         //Creating mock objects
         SourceType sourceMock=mock(SourceType.class);
@@ -26,4 +26,5 @@ public class UserToComputeTest implements UserToCompute{
         verify(sourceMock).getData();
         verify(outputMock).getData();
     
+    }
 }
