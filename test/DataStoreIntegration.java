@@ -5,6 +5,6 @@ class DataStoreIntegration {
         InputConfig in;
 
         api.readData(null);
-        api.writeData(in, null)
+        api.writeData(in, null);
     }
 }
