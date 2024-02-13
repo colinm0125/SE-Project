@@ -1,6 +1,7 @@
 import org.mockito.Mockito;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.any;
+import src;
 
 //Mock objects
 private SourceType sourceMock=Mockito.mock(SourceType.class);
