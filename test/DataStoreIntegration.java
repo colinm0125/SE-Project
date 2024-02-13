@@ -1,5 +1,5 @@
 class DataStoreIntegration {
-    public static void mian(String args[]) throws Exception {
+    public static void main(String args[]) throws Exception {
         DataToFromComputeAPI api;
         OutputConfig out;
         InputConfig in;
