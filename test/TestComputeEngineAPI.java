@@ -8,11 +8,10 @@ public class TestComputeEngineAPI {
     @Test
     public void testComputeEngineAPI() throws Exception {
         RawData data = Mockito.mock(RawData.class);
-        ComputeEngineAPI computeAPI = Mockito.mock(ComputeAPI.class);
 
-        when(ComputeAPI.compute(data)).thenReturn("Testing");
+        when(data).thenReturn("Data computed");
 
-        Test testComputeEngineAPI = new ComputeEngineAPI();
-        System.out.println(test.compute(data));
+        ComputeEngineAPI testAPI = new ComputeEngineAPI();
+        testAPI.compute(data);
     }
 }
