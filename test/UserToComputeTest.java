@@ -16,23 +16,23 @@ public class UserToComputeTest implements UserToCompute {
         testAPI.testSetInputSource(sourceMock);
     }
 
-    public void testSetOutputDest(){
+    public void testSetOutputDest() {
         when(testAPI.setOutputDest(any(OutputDest.class))).thenReturn("Setting Output Dest Success");
         testAPI.testSetOutputDest(outputMock);
 
     }
 
-    public void testSetDelimeter(){
+    public void testSetDelimeter() {
         when(testAPI.setDelimeter(any(UserDelimeter.class))).thenReturn("Setting delimeter success");
         testAPI.testSetDelimeter(inputDelimMock,outputDelimMock);
     }
 
-    public void testGetOutput(){
+    public void testGetOutput() {
         when(testAPI.getOutput()).thenReturn("Output :)");
         testAPI.testGetOutput;
     }
 
-    public void testComputeRequest(){
+    public void testComputeRequest() {
         when(testAPI.computeRequest(any(RawData.class))).thenReturn("Compute Request success");
         testAPI.testComputeRequest;        
 }
