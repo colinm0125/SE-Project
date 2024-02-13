@@ -11,7 +11,7 @@ private UserDelimeter outputDelimMock;
 private UserToComputeAPI testAPI;
 
 
-public class UserToComputeTest implements UserToCompute {
+public class UserToComputeTest {
      public void testSetInputSource(){
         sourceMock=Mockito.mock(SourceType.class);
         when(testAPI.setInputSource(any(SourceType.class))).thenReturn ("Setting Input Success");
