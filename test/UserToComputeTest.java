@@ -3,10 +3,10 @@ import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.any;
 
 //Mock objects
-private SourceType sourceMock=mock(SourceType.class);
-private OutputDest outputMock=mock(OutputDest.class);
-private UserDelimeter inputDelimMock=mock(UserDelimeter.class);
-private UserDelimeter outputDelimMock=mock(UserDelimeter.class);
+private SourceType sourceMock=Mockito.mock(SourceType.class);
+private OutputDest outputMock=Mockito.mock(OutputDest.class);
+private UserDelimeter inputDelimMock=Mockito.mock(UserDelimeter.class);
+private UserDelimeter outputDelimMock=Mockito.mock(UserDelimeter.class);
 private UserToComputeAPI testAPI;
 
 
