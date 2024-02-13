@@ -2,15 +2,17 @@ import org.mockito.Mockito;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.any;
 
-//Mock objects
-private SourceType sourceMock;
-private OutputDest outputMock;
-private UserDelimeter inputDelimMock; 
-private UserDelimeter outputDelimMock;
-private UserToComputeAPI testAPI;
+
 
 
 public class UserToComputeTest {
+     //Mock objects
+     private SourceType sourceMock;
+     private OutputDest outputMock;
+     private UserDelimeter inputDelimMock; 
+     private UserDelimeter outputDelimMock;
+     private UserToComputeAPI testAPI;
+     
      public void testSetInputSource(){
         sourceMock=Mockito.mock(SourceType.class);
         when(testAPI.setInputSource(any(SourceType.class))).thenReturn ("Setting Input Success");
