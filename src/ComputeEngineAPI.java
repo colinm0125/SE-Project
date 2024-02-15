@@ -3,10 +3,10 @@ public class ComputeEngineAPI implements ComputeEngine{
     RawData data;
 
     //Constructors
-    public ComputeEngine(RawData data) {
+    public ComputeEngineAPI(RawData data) {
         this.data = data;
     }
-    public ComputeEngine() {
+    public ComputeEngineAPI() {
     }
 
     //inputs raw data and fetches results/error codes
