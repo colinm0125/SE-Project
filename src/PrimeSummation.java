@@ -1,16 +1,10 @@
-import java.util.*;
-import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
 
-
-class PrimeSumResult {
-    List<List<Integer>> results;
-    List<Integer> resultsSize;
-
-    PrimeSumResult(List<List<Integer>> results, List<Integer> resultsSize) {
-        this.results = results;
-        this.resultsSize = resultsSize;
-    }
-}
 
 
 public class PrimeSummation {
@@ -44,7 +38,7 @@ public class PrimeSummation {
     }
 
     //The computation for the prime summation of a given number
-   /*  public static List<List<Integer>> primeSum(int num, int depth) {
+    /*  public static List<List<Integer>> primeSum(int num, int depth) {
         List<List<Integer>> results = new ArrayList<>();
         for (int i = 0; i< primes.size(); i++) {
             int prime1 = primes.get(i);
