@@ -28,8 +28,7 @@ public class PrimeSummation {
                     if(prime <= limit) {
                         primes.add(prime);
                     }
-                }
-                
+                }  
             }
         }
         catch (IOException e) {
@@ -62,7 +61,9 @@ public class PrimeSummation {
         List<Integer> resultsSize = new ArrayList<>();
         
         for (int prime : primes) {
-            if (prime >= num) break;
+            if (prime >= num) {
+                break;
+            }
             int complement = num - prime;
             if (primes.contains(complement)) {
                 List<Integer> result = new ArrayList<>();
@@ -95,8 +96,8 @@ public class PrimeSummation {
         System.out.println("Enter integers (enter -1 to exit):");
         int input;
         while ((input = scanner.nextInt()) != -1) {
-            PrimeSumResult result = primeSum(input,1); // Adjusted type here
-            int recursions = getRecursions(result.results); // Accessing the results list from PrimeSumResult
+            PrimeSumResult result = primeSum(input,1); 
+            int recursions = getRecursions(result.results); 
             if (result.results.isEmpty()) {
                 System.out.println("No prime summation found for " + input);
             } else {
