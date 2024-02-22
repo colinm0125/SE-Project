@@ -22,7 +22,7 @@ public class PrimeSummation {
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             String line;
             while((line=br.readLine()) != null) {
-                String[] tokens = line.trim().split("\\s");
+                String[] tokens = line.trim().split(", ");
                 for (String token : tokens) {
                     int prime = Integer.parseInt(token);
                     if(prime <= limit) {
@@ -40,7 +40,9 @@ public class PrimeSummation {
     public static PrimeSumResult primeSum(int num, int depth, List<Integer> sums) {
         List<List<Integer>> results = new ArrayList<>();
         List<Integer> resultsSize = new ArrayList<>();
-        
+        if (num < -1){
+            throw new IllegalArgumentException("Input Number must be greater than 0 or -1 to exit");
+        }
         for (int prime : primes) {
             if (prime >= num) {
                 break;
