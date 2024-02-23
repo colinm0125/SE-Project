@@ -55,8 +55,7 @@ public class PrimeSummation {
                     // Check if the complement is not 2 or 3 to continue recursion
                     if (complement > 3) {
                         primeSum(complement, depth+1, newIntermediate);
-                    }
-                    else {
+                    } else {
                         totalSummations++;
                         System.out.println("Intermeditate Result: " + newIntermediate);
                     }
