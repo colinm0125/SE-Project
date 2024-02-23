@@ -66,7 +66,6 @@ public class PrimeSummation {
         return new PrimeSumResult(results, resultsSize);
     }
         
-
     public static void main(String[] args) {
         String fileName = "primes.txt";
         
