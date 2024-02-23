@@ -15,19 +15,17 @@ public class PrimeSummation {
     //private static ArrayList<Integer> resultsSize =  new ArrayList<>();
     
 
-    public static void initializePrimes(String fileName, int limit) {
+    public static void initializePrimes(String fileName) {
         
         //private function to initialize the list from a given .csv file. Will need to come back to it based on what we change for our primeList
         primes = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             String line;
             while((line=br.readLine()) != null) {
-                String[] tokens = line.trim().split(", ");
+                String[] tokens = line.trim().split(",\\s*");
                 for (String token : tokens) {
                     int prime = Integer.parseInt(token);
-                    if(prime <= limit) {
-                        primes.add(prime);
-                    }
+                    primes.add(prime);
                 }  
             }
         } catch (IOException e) {
@@ -71,8 +69,8 @@ public class PrimeSummation {
 
     public static void main(String[] args) {
         String fileName = "primes.txt";
-        int limit = 100; // Adjust the limit as needed
-        initializePrimes(fileName, limit);
+        
+        initializePrimes(fileName);
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter integers (enter -1 to exit):");
