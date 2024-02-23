@@ -2,14 +2,16 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 public class PrimeSummationTest {
 
     @Test
     public void testPrimeSumPerformance() {
         // Define input parameters for the test
-        int num = 100; // Adjust the input number as needed
+        // Adjust the input number as needed
+        int num = 100;
         List<Integer> sums = new ArrayList<>();
         
         // Measure the execution time of the primeSum method
