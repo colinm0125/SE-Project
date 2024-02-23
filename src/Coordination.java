@@ -5,7 +5,7 @@ class Coordination {
     private Computation engine;
     private List<Integer> in;
     private List<Integer> out;
-    private ComputeEngineAPI computAPI;
+    private ComputeEngineAPI computeAPI;
     private DataToFromComputeAPI dataAPI;
     private int key;
 
