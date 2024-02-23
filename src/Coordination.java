@@ -11,7 +11,7 @@ class Coordination {
 
     //Constructors
     public Coordination(ComputeEngineAPI computeAPI) {
-        this.computAPI=computeAPI;
+        this.computeAPI=computeAPI;
     }
     public Coordination() {
         computeAPI = new ComputeEngineAPI();
