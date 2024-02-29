@@ -1,5 +1,6 @@
 class DataStoreIntegration {
-    public static void main(String args[]) throws Exception {
+    @Test
+    public void test() throws Exception {
         DataToFromComputeAPI api;
         OutputConfig out;
         InputConfig in;
