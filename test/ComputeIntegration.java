@@ -1,7 +1,9 @@
 import java.util.ArrayList;
+import org.junit.jupiter.api.Test;
 
 class ComputeIntegration {
-    public static void main(String args[]) {
+    @Test
+    public void test() {
         ComputeEngineAPI api = new ComputeEngineAPI();
 
         List<Integer> in = new ArrayList<Integer>();
