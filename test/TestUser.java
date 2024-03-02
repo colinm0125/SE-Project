@@ -13,7 +13,7 @@ public class TestUser {
 
 	public void run(String outputPath) {
 		char delimiter = ',';
-		String inputPath = "test" + File.separatorChar + "testInputFile.test";
+		String inputPath = "test" + File.separatorChar + "testInputFile.csv";
 
 		coordinator.setInputSource(inputPath);
 		coordinator.setOutputDest();
