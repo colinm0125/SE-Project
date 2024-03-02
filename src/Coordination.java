@@ -1,17 +1,17 @@
 import java.util.ArrayList;
 
-class Coordination {
+class Coordination implements UserToCompute {
     //Global variables
     private Computation engine;
     private List<Integer> in;
     private List<Integer> out;
-    private ComputeEngineAPI computeAPI;
+    private ComputeEngineAPI computAPI;
     private DataToFromComputeAPI dataAPI;
     private int key;
 
     //Constructors
     public Coordination(ComputeEngineAPI computeAPI) {
-        this.computeAPI=computeAPI;
+        this.computAPI=computeAPI;
     }
     public Coordination() {
         computeAPI = new ComputeEngineAPI();
@@ -35,7 +35,32 @@ class Coordination {
         key=dataAPI.writeData(out, key);
         return key;
     }
-    public List<Integer> compute() {
+
+    //Implementations
+    public SourceType setInputSource(SourceType source) {
+        in=source;
+        return in;
+    }
+    public OutputDest setOutputDest(OutputDest dest){
+        return key;
+    }
+    //Delim will be , for now
+    public UserDelimeter setDelimeter(UserDelimeter inputDelim, UserDelimeter outputDelim) {
+
+        return null;
+    }
+    //Method overload
+    public UserDelimeter setDelimeter(UserDelimeter delim) {
+        setDelimeter(delim, delim);
+        return delim;
+    }
+
+
+    public SourceType getOutput() {
+        return read();
+    }
+    public ComputeResults computeRequest(RawData input) {
+        in=data;
         out=computeAPI.compute(in);
         return out;
     }
