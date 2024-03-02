@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class ComputeIntegration {
-    public void TestComputeIntegration() throws Exception{
+    public void testComputeIntegration() throws Exception{
         ComputeEngineAPI api = new ComputeEngineAPI();
 
         List<Integer> in = new ArrayList<Integer>();
