@@ -5,13 +5,13 @@ class Coordination implements UserToCompute {
     private Computation engine;
     private List<Integer> in;
     private List<Integer> out;
-    private ComputeEngineAPI computAPI;
+    private ComputeEngineAPI computeAPI;
     private DataToFromComputeAPI dataAPI;
     private int key;
 
     //Constructors
     public Coordination(ComputeEngineAPI computeAPI) {
-        this.computAPI=computeAPI;
+        this.computeAPI=computeAPI;
     }
     public Coordination() {
         computeAPI = new ComputeEngineAPI();
