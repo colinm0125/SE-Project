@@ -77,11 +77,11 @@ class Coordination implements UserToCompute {
         //maybe better to have this method input just a single int
         //then each thread can run each int in the list, optimizing it
         Callable<Void> user = () -> {
-            while (ComputeResult != null) {
+            while (out != null) {
                 out = computeAPI.compute(in);
             }
             return null;
-        }
+        };
 
         //Computation uses a lot of memory so 40 thread upper bound for now
         int upper = 40;
