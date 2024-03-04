@@ -77,7 +77,7 @@ class Coordination implements UserToCompute {
         //maybe better to have this method input just a single int
         //then each thread can run each int in the list, optimizing it
         Callable<Void> user = () -> {
-            while (ComputeResults != null) {
+            while (out != null) {
                 out = computeAPI.compute(in);
             }
             return null;
