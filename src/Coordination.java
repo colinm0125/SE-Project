@@ -45,6 +45,7 @@ class Coordination implements UserToCompute {
 
     //Implementations
     public SourceType setInputSource(SourceType source) {
+
         in = source;
         return in;
     }
@@ -52,6 +53,7 @@ class Coordination implements UserToCompute {
     public OutputDest setOutputDest(OutputDest dest) {
         return key;
     }
+
 
     //Delim will be , for now
     public UserDelimeter setDelimeter(UserDelimeter inputDelim, UserDelimeter outputDelim) {
@@ -69,6 +71,7 @@ class Coordination implements UserToCompute {
     public SourceType getOutput() {
         return read();
     }
+
 
     public ComputeResults computeRequest(List<Integer> input) {
         in = data;
@@ -99,6 +102,7 @@ class Coordination implements UserToCompute {
                 throw new RuntimeException(e);
             }
         });
+
 
         return out;
     }
