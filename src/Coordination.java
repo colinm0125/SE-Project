@@ -4,17 +4,18 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-class Coordination {
 class Coordination implements UserToCompute {
     //Global variables
     private Computation engine;
     private List<Integer> in;
-@@ -11,32 +15,91 @@ class Coordination {
+    private List<Integer> out;
+    private ComputeEngineAPI computAPI;
+    private DataToFromComputeAPI dataAPI;
+    private int key;
 
     //Constructors
     public Coordination(ComputeEngineAPI computeAPI) {
-        this.computeAPI=computeAPI;
-        this.computeAPI = computeAPI;
+        this.computAPI = computeAPI;
     }
 
     public Coordination() {
@@ -24,8 +25,6 @@ class Coordination implements UserToCompute {
     //Methods
     public List<Integer> read(int key) {
         //Uses Storage to get list from input csv, needs data key
-        ArrayList<Integer> values=dataAPI.readData(key);
-        in=values;
         ArrayList<Integer> values = dataAPI.readData(key);
         in = values;
         return in;
@@ -33,8 +32,6 @@ class Coordination implements UserToCompute {
 
     public List<Integer> read() {
         //Method overloading, uses 0 as default
-        ArrayList<Integer> values=dataAPI.readData(0);
-        in=values;
         ArrayList<Integer> values = dataAPI.readData(0);
         in = values;
         return in;
@@ -42,12 +39,9 @@ class Coordination implements UserToCompute {
 
     public int write() {
         //Uses Storage to write list as csv, returns key
-        key=dataAPI.writeData(out, key);
         key = dataAPI.writeData(out, key);
         return key;
     }
-    public List<Integer> compute() {
-        out=computeAPI.compute(in);
 
     //Implementations
     public SourceType setInputSource(SourceType source) {
@@ -83,11 +77,11 @@ class Coordination implements UserToCompute {
         //maybe better to have this method input just a single int
         //then each thread can run each int in the list, optimizing it
         Callable<Void> user = () -> {
-            while (out != null) {
-                out = computeAPI.compute(in);
+            while (ComputeResults != NULL) {
+                out = computAPI.compute(in);
             }
             return null;
-        };
+        }
 
         //Computation uses a lot of memory so 40 thread upper bound for now
         int upper = 40;
