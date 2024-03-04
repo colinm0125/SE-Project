@@ -1,7 +1,8 @@
 import java.util.ArrayList;
+import java.util.List;
 
 class ComputeIntegration {
-    public static void main(String args[]) {
+    public void testComputeIntegration() throws Exception{
         ComputeEngineAPI api = new ComputeEngineAPI();
 
         List<Integer> in = new ArrayList<Integer>();
@@ -9,7 +10,7 @@ class ComputeIntegration {
         in.add(10);
         in.add(25);
 
-        out=api.compute(in);
+        List<Integer> out=api.compute(in);
 
         if(out.get(0) != 0) {
             throw new Exception();
