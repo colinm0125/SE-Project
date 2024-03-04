@@ -8,3 +8,6 @@ Example:
 Input 6:
 Prime implimentations: 2+2+2, 3+3.
 Output: 2
+
+Created an upper bound for the threading to be 40 since the computation
+is memory intensive.
