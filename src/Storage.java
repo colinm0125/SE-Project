@@ -29,7 +29,7 @@ class Storage implements DataToFromCompute {
     }
     public List<Integer> readData(int key) {
         List<Integer> result = new ArrayList<Integer>();
-        File f = new File(inName+(String)key+".csv");
+        File f = new File(inName+key+".csv");
         Scanner in = new Scanner(f);
 
         while(in.hasNextLine()) {
