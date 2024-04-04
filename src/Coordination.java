@@ -6,7 +6,6 @@ import java.util.concurrent.Future;
 
 class Coordination implements UserToCompute {
     //Global variables
-    private Computation engine;
     private List<Integer> in;
     private List<Integer> out;
     private ComputeEngineAPI computeAPI;
