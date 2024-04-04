@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-class Storage implements DataToFromComptue {
+class Storage implements DataToFromCompute {
     private String outName = "StreamOfIntsOut";
     private String inName = "StreamOfIntsIn";
     private int files = 0;
