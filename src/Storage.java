@@ -34,8 +34,8 @@ class Storage implements DataToFromCompute {
 
         while(in.hasNextLine()) {
             String line=in.nextLine();
-            String[] hold=line.split(",");
-            for(String hold : hold)  {
+            String[] temp=line.split(",");
+            for(String hold : temp)  {
                 result.add(Integer.parseInt(hold.trim()));
             }
         }
