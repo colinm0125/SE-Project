@@ -1,10 +1,11 @@
 import java.io.File;
+import java.io.PrintWriter;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-class Storage implements DataToFromComptue {
+class Storage implements DataToFromCompute {
     private String outName = "StreamOfIntsOut";
     private String inName = "StreamOfIntsIn";
     private int files = 0;
@@ -15,7 +16,7 @@ class Storage implements DataToFromComptue {
 
     //Methods
     public int writeData(List<Integer> data) {
-        File f = new File(outName+(String)files+".csv");
+        File f = new File(outName+files+".csv");
         files++;
         PrintWriter pw = new PrintWriter(f);
 
@@ -28,13 +29,13 @@ class Storage implements DataToFromComptue {
     }
     public List<Integer> readData(int key) {
         List<Integer> result = new ArrayList<Integer>();
-        File f = new File(inName+(String)key+".csv");
+        File f = new File(inName+key+".csv");
         Scanner in = new Scanner(f);
 
         while(in.hasNextLine()) {
             String line=in.nextLine();
-            String[] hold=line.split(",");
-            for(String hold : hold)  {
+            String[] temp=line.split(",");
+            for(String hold : temp)  {
                 result.add(Integer.parseInt(hold.trim()));
             }
         }
