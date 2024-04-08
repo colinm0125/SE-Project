@@ -1,7 +1,7 @@
 public interface DataToFromCompute {
     //A method to read the data from the source
-    RawData readData(SourceType sourceType);    
+    List<Integer> readData(int);
     //A method to write to the output source
-    DataKey writeData(ComputeResults compute, SourceType sourceType);
+    int writeData(List<Integer> data);
     //Ask Prof Abt source type as a parameter versus a return type.
 }
