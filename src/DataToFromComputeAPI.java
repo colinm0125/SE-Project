@@ -18,7 +18,7 @@ public class DataToFromComputeAPI implements DataToFromCompute {
     }
 
     //A method to write to the output source
-    public DataKey writeData(ComputeResults compute, SourceType sourceType) {
+    public DataKey writeData(List<Integer> result, int key) {
 
         return null;
     }
