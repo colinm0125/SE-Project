@@ -1,3 +1,5 @@
+import java.util.List;
+
 public interface DataToFromCompute {
     //A method to read the data from the source
     List<Integer> readData(int key);
