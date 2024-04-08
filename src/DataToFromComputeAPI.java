@@ -12,7 +12,7 @@ public class DataToFromComputeAPI implements DataToFromCompute {
     }
 
     //A method to read the data from the source
-    public RawData readData(SourceType sourceType) {
+    public RawData readData(int key) {
 
         return null;
     }
