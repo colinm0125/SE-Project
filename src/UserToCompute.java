@@ -1,3 +1,5 @@
+import java.util.List;
+
 public interface UserToCompute {
     //Method to set input source
     SourceType setInputSource(SourceType source);
