@@ -16,7 +16,6 @@ public class TestComputeEngineAPI {
         ComputeEngineAPI testAPI = new ComputeEngineAPI();
 
         when(testAPI.compute(any(List.class))).thenReturn("Data computed");
-        GradlePath
  
         testAPI.compute(data);
     }
