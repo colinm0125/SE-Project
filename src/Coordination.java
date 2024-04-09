@@ -39,7 +39,7 @@ class Coordination implements UserToCompute {
 
     public int write() {
         //Uses Storage to write list as csv, returns key
-        key = dataAPI.writeData(out, key);
+        key = dataAPI.writeData(out);
         return key;
     }
 

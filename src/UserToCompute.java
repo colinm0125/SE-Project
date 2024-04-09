@@ -2,7 +2,7 @@ import java.util.List;
 
 public interface UserToCompute {
     //Method to set input source
-    SourceType setInputSource(SourceType source);
+    List<Integer> setInputSource(List<Integer> source);
     
     //Method to set output destination for prime summation
     int setOutputDest(OutputDest dest);
