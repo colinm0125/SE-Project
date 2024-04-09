@@ -1,4 +1,5 @@
 import java.util.List;
+import java.io.IOException;
 
 public class UserToComputeAPI implements UserToCompute{
     //Object instances
@@ -44,7 +45,7 @@ public class UserToComputeAPI implements UserToCompute{
     }
 
     //Method to call the computation prime summations
-    public List<Integer> getOutput() {
+    public List<Integer> getOutput() throws IOException {
 
         return null;
     }
