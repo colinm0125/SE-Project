@@ -12,7 +12,7 @@ public interface UserToCompute {
     UserDelimeter setDelimeter(UserDelimeter inputDelim, UserDelimeter outputDelim);
 
     //Method to call the computation prime summations
-    SourceType getOutput();
+    List<Integer> getOutput();
 
     //Comutes and returns the data based off of compute engine
     List<Integer> computeRequest(List<Integer> input);
