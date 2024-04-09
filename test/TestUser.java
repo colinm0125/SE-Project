@@ -16,13 +16,14 @@ public class TestUser {
 	}
 
 	public void run(String outputPath) {
-		char delimiter = ',';
+		delimeter = new Mockito.mock(UserDelimeter.class);
 		String inputPath = "test" + File.separatorChar + "testInputFile.csv";
+		fakeList = new Mockito.mock(List.class);
 
-		coordinator.setInputSource(inputPath);
-		coordinator.setOutputDest();
+		coordinator.setInputSource(fakeList);
+		coordinator.setOutputDest(0);
 		coordinator.setDelimeter(delimeter);
-		coordinator.computeRequest();
+		coordinator.computeRequest(fakeList);
 		// TODO 4: Call the appropriate method(s) on the coordinator to get it to 
 		// run the compute job specified by inputPath, outputPath, and delimiter
 	}
