@@ -32,7 +32,7 @@ class Coordination implements UserToCompute {
 
     public List<Integer> read() {
         //Method overloading, uses 0 as default
-        ArrayList<Integer> values = dataAPI.readData(0);
+        List<Integer> values = dataAPI.readData(0);
         in = values;
         return in;
     }
