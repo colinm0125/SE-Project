@@ -15,7 +15,7 @@ class Storage implements DataToFromCompute {
     }
 
     //Methods
-    public int writeData(List<Integer> data) {
+    public int writeData(List<Integer> data) throws IOException {
         File f = new File(outName+files+".csv");
         files++;
         PrintWriter pw = new PrintWriter(f);
