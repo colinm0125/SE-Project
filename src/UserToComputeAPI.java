@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class UserToComputeAPI implements UserToCompute{
     //Object instances
     SourceType source;
