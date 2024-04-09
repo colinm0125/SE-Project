@@ -1,4 +1,5 @@
 import java.util.List;
+import java.io.IOException;
 
 public interface UserToCompute {
     //Method to set input source
@@ -12,7 +13,7 @@ public interface UserToCompute {
     UserDelimeter setDelimeter(UserDelimeter inputDelim, UserDelimeter outputDelim);
 
     //Method to call the computation prime summations
-    List<Integer> getOutput();
+    List<Integer> getOutput() throws IOException;
 
     //Comutes and returns the data based off of compute engine
     List<Integer> computeRequest(List<Integer> input);
