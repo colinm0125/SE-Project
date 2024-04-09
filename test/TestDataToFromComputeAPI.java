@@ -8,19 +8,20 @@ public class TestDataToFromComputeAPI {
 
     @Test
     public void testWrite() throws Exception {
-        SourceType mockSource = Mockito.mock(SourceType.class);
+        int mockSource = Mockito.mock(Integer.class);
         ComputeResults mockResult = Mockito.mock(ComputeResults.class);
 
-        when(testAPI.writeData(any(SourceType.class), any(ComputeResults.clas))).thenReturn("Key made");
+        when(testAPI.writeData(any(Integer.class), any(ComputeResults.class))).thenReturn("Key made");
 
         testAPI.writeData(mockSource, mockResult);
     }
 
     @Test
     public void testRead() throws Exception {
-        SourceType mockSource = Mocktio.mock(SourceType.class);
+        int mockSource = Mocktio.mock(Integer.class);
 
-        when(testAPI.readData(any(SourceType.class))).thenReturn("Data read");
+
+        when(testAPI.readData(any(Integer.class))).thenReturn("Data read");
 
         testAPI.readData(mockSource);
     }

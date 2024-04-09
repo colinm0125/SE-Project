@@ -1,7 +1,9 @@
+import org.junit.Test;
 import org.mockito.Mockito;
 import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.any;
+import java.util.List;
 
 public class TestComputeEngineAPI {
 
@@ -9,10 +11,11 @@ public class TestComputeEngineAPI {
     
     @Test
     public void testComputeEngineAPI() throws Exception {
-        RawData data = Mockito.mock(RawData.class);
+
+        List<Integer> data = Mockito.mock(List.class);
         ComputeEngineAPI testAPI = new ComputeEngineAPI();
 
-        when(testAPI.compute(any(RawData.class))).thenReturn(data);
+        when(testAPI.compute(any(List.class))).thenReturn(data);
  
         testAPI.compute(data);
     }

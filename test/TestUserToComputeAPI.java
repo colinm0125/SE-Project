@@ -6,14 +6,14 @@ public class TestUserToComputeAPI {
      private UserToComputeAPI testAPI;
 
      public void testSetInputSource() throws Exception {
-        SourceType sourceMock=Mockito.mock(SourceType.class);
-        when(testAPI.setInputSource(any(SourceType.class))).thenReturn("Setting Input Success");
+        int sourceMock=Mockito.mock(Integer.class);
+        when(testAPI.setInputSource(any(Integer.class))).thenReturn("Setting Input Success");
         testAPI.setInputSource(sourceMock);
     }
 
     public void testSetOutputDest() throws Exception {
-        OutputDest outputMock=Mockito.mock(OutputDest.class);
-        when(testAPI.setOutputDest(any(OutputDest.class))).thenReturn("Setting Output Dest Success");
+        int outputMock=Mockito.mock(Integer.class);
+        when(testAPI.setOutputDest(any(Integer.class))).thenReturn("Setting Output Dest Success");
         testAPI.setOutputDest(outputMock);
 
     }
