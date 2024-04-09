@@ -48,7 +48,7 @@ public class UserToComputeAPI implements UserToCompute{
     }
 
     //Computes and returns the data based off of compute engine
-    public ComputeResults computeRequest(RawData input) {
+    public ComputeResults computeRequest(List<Integer> input) {
 
         return null;
     }

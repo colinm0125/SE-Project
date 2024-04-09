@@ -14,13 +14,13 @@ public class DataToFromComputeAPI implements DataToFromCompute {
     }
 
     //A method to read the data from the source
-    public RawData readData(int key) {
+    public List<Integer> readData(int key) {
 
         return null;
     }
 
     //A method to write to the output source
-    public DataKey writeData(List<Integer> result, int key) {
+    public int writeData(List<Integer> result, int key) {
 
         return null;
     }
