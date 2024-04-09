@@ -16,9 +16,9 @@ public class TestUser {
 	}
 
 	public void run(String outputPath) {
-		delimeter = new Mockito.mock(UserDelimeter.class);
+		UserDelimeter delimeter = new Mockito.mock(UserDelimeter.class);
 		String inputPath = "test" + File.separatorChar + "testInputFile.csv";
-		fakeList = new Mockito.mock(List.class);
+		List<Integer> fakeList = new Mockito.mock(List.class);
 
 		coordinator.setInputSource(fakeList);
 		coordinator.setOutputDest(0);
