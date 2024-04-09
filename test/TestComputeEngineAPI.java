@@ -11,7 +11,7 @@ public class TestComputeEngineAPI {
     
     @Test
     public void testComputeEngineAPI() throws Exception {
-        List<Integer> data = Mockito.mock(List<Integer>);
+        List<Integer> data = Mockito.mock(List.class);
         ComputeEngineAPI testAPI = new ComputeEngineAPI();
 
         when(testAPI.compute(any(List<Integer>))).thenReturn("Data computed");
