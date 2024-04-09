@@ -9,10 +9,10 @@ public class TestComputeEngineAPI {
     
     @Test
     public void testComputeEngineAPI() throws Exception {
-        RawData data = Mockito.mock(RawData.class);
+        int data = Mockito.mock(RawData.class);
         ComputeEngineAPI testAPI = new ComputeEngineAPI();
 
-        when(testAPI.compute(any(RawData.class))).thenReturn("Data computed");
+        when(testAPI.compute(any(Integer.class))).thenReturn("Data computed");
  
         testAPI.compute(data);
     }
