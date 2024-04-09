@@ -69,7 +69,7 @@ class Coordination implements UserToCompute {
     }
 
 
-    public List<Integer> getOutput() {
+    public List<Integer> getOutput() throws IOException {
         return read();
     }
 
