@@ -26,7 +26,7 @@ public class UserToComputeAPI implements UserToCompute{
     }
 
     //Method to set output destination for prime summation
-    public OutputDest setOutputDest(OutputDest dest){
+    public int setOutputDest(List<Integer> dest){
 
         return dest;
     }
@@ -44,13 +44,13 @@ public class UserToComputeAPI implements UserToCompute{
     }
 
     //Method to call the computation prime summations
-    public SourceType getOutput() {
+    public List<Integer> getOutput() {
 
         return null;
     }
 
     //Computes and returns the data based off of compute engine
-    public ComputeResults computeRequest(List<Integer> input) {
+    public List<Integer> computeRequest(List<Integer> input) {
 
         return null;
     }
