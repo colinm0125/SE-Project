@@ -5,10 +5,9 @@ class DataStoreIntegration {
     public void dataStoreIntegrationTest() throws Exception {
         DataToFromComputeAPI api = new DataToFromComputeAPI(); // Initialize the api variable
         OutputConfig out;
-        List<Integer> l = new ArrayList<Integer>();;
-        InputConfig in = new InputConfig(l); // Initialize the in variable with the required arguments
+        List<Integer> l = new ArrayList<Integer>();
 
         api.readData(0);
-        api.writeData(in);
+        api.writeData(l);
     }
 }
