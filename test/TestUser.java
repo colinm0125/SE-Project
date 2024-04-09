@@ -14,10 +14,12 @@ public class TestUser {
 	public void run(String outputPath) {
 		char delimiter = ',';
 		String inputPath = "test" + File.separatorChar + "testInputFile.csv";
+		
+		
 
 		coordinator.setInputSource(inputPath);
-		coordinator.setOutputDest();
-		coordinator.setDelimeter(delimeter);
+		coordinator.setOutputDest(0);
+		coordinator.setDelimeter(delimiter);
 		coordinator.computeRequest();
 		// TODO 4: Call the appropriate method(s) on the coordinator to get it to 
 		// run the compute job specified by inputPath, outputPath, and delimiter
