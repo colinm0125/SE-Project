@@ -12,7 +12,7 @@ public class TestComputeEngineAPI {
         RawData data = Mockito.mock(RawData.class);
         ComputeEngineAPI testAPI = new ComputeEngineAPI();
 
-        when(testAPI.compute(any(RawData.class))).thenReturn("Data computed");
+        when(testAPI.compute(any(RawData.class))).thenReturn(data);
  
         testAPI.compute(data);
     }
