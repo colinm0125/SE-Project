@@ -25,7 +25,7 @@ class Coordination implements UserToCompute {
     //Methods
     public List<Integer> read(int key) {
         //Uses Storage to get list from input csv, needs data key
-        ArrayList<Integer> values = dataAPI.readData(key);
+        List<Integer> values = dataAPI.readData(key);
         in = values;
         return in;
     }
@@ -44,13 +44,13 @@ class Coordination implements UserToCompute {
     }
 
     //Implementations
-    public SourceType setInputSource(SourceType source) {
+    public List<Integer> setInputSource(List<Integer> source) {
 
         in = source;
         return in;
     }
 
-    public OutputDest setOutputDest(OutputDest dest) {
+    public int setOutputDest(OutputDest dest) {
         return key;
     }
 
@@ -68,12 +68,12 @@ class Coordination implements UserToCompute {
     }
 
 
-    public SourceType getOutput() {
+    public List<Integer> getOutput() {
         return read();
     }
 
 
-    public ComputeResults computeRequest(List<Integer> input) {
+    public List<Integer> computeRequest(List<Integer> input) {
         in = data;
 
         //Multithreading this program doesnt do much,
