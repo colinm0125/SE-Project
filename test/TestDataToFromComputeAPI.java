@@ -18,7 +18,8 @@ public class TestDataToFromComputeAPI {
 
     @Test
     public void testRead() throws Exception {
-        SourceType mockSource = Mocktio.mock(Integer.class);
+        int mockSource = Mocktio.mock(Integer.class);
+
 
         when(testAPI.readData(any(Integer.class))).thenReturn("Data read");
 
