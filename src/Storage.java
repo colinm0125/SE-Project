@@ -27,7 +27,7 @@ class Storage implements DataToFromCompute {
         pw.close();
         return files;
     }
-    public List<Integer> readData(int key) {
+    public List<Integer> readData(int key) throws IOException {
         List<Integer> result = new ArrayList<Integer>();
         File f = new File(inName+key+".csv");
         Scanner in = new Scanner(f);
