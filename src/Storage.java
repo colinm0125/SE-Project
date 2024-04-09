@@ -15,7 +15,7 @@ class Storage implements DataToFromCompute {
     }
 
     //Methods
-    public int writeData(List<Integer> data) {
+    public int writeData(List<Integer> data) throws IOException {
         File f = new File(outName+files+".csv");
         files++;
         PrintWriter pw = new PrintWriter(f);
@@ -27,7 +27,7 @@ class Storage implements DataToFromCompute {
         pw.close();
         return files;
     }
-    public List<Integer> readData(int key) {
+    public List<Integer> readData(int key) throws IOException {
         List<Integer> result = new ArrayList<Integer>();
         File f = new File(inName+key+".csv");
         Scanner in = new Scanner(f);

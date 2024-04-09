@@ -5,7 +5,7 @@ public interface UserToCompute {
     List<Integer> setInputSource(List<Integer> source);
     
     //Method to set output destination for prime summation
-    int setOutputDest(OutputDest dest);
+    int setOutputDest(int dest);
 
     //Method to set custom delimeters
     //Possible method overloading in future

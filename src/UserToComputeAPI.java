@@ -3,7 +3,7 @@ import java.util.List;
 public class UserToComputeAPI implements UserToCompute{
     //Object instances
     SourceType source;
-    OutputDest dest;
+    int dest;
     UserDelimeter inputDelim, outputDelim;
     RawData input;
 
@@ -26,7 +26,7 @@ public class UserToComputeAPI implements UserToCompute{
     }
 
     //Method to set output destination for prime summation
-    public int setOutputDest(List<Integer> dest){
+    public int setOutputDest(int dest){
 
         return dest;
     }
