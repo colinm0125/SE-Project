@@ -1,4 +1,5 @@
 import java.util.List;
+import java.io.IOException;
 
 public class DataToFromComputeAPI implements DataToFromCompute {
     //Object Instances
@@ -14,13 +15,13 @@ public class DataToFromComputeAPI implements DataToFromCompute {
     }
 
     //A method to read the data from the source
-    public List<Integer> readData(int key) {
+    public List<Integer> readData(int key) throws IOException {
 
         return null;
     }
 
     //A method to write to the output source
-    public int writeData(List<Integer> result) {
+    public int writeData(List<Integer> result) throws IOException {
 
         return 0;
     }
