@@ -5,7 +5,7 @@ class DataStoreIntegration {
         List<Integer> l = new List<Integer>;
         InputConfig in = new InputConfig(); // Initialize the in variable with the required arguments
 
-        api.readData(null);
-        api.writeData(in, null);
+        api.readData(0);
+        api.writeData(in);
     }
 }
