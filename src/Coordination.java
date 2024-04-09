@@ -50,7 +50,7 @@ class Coordination implements UserToCompute {
         return in;
     }
 
-    public int setOutputDest(OutputDest dest) {
+    public int setOutputDest(int dest) {
         return key;
     }
 
