@@ -20,7 +20,7 @@ public class DataToFromComputeAPI implements DataToFromCompute {
     }
 
     //A method to write to the output source
-    public int writeData(List<Integer> result, int key) {
+    public int writeData(List<Integer> result) {
 
         return null;
     }
