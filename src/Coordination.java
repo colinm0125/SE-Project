@@ -74,7 +74,7 @@ class Coordination implements UserToCompute {
 
 
     public List<Integer> computeRequest(List<Integer> input) {
-        in = data;
+        in = input;
 
         //Multithreading this program doesnt do much,
         //maybe better to have this method input just a single int
