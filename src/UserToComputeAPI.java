@@ -20,7 +20,7 @@ public class UserToComputeAPI implements UserToCompute{
     }
 
     //Method to set input source
-    public SourceType setInputSource(SourceType source) {
+    public List<Integer> setInputSource(List<Integer> source) {
 
         return source;
     }
