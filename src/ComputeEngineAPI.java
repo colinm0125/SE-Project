@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class ComputeEngineAPI implements ComputeEngine{
     //Object instances
     RawData data;
@@ -10,7 +12,7 @@ public class ComputeEngineAPI implements ComputeEngine{
     }
 
     //inputs raw data and fetches results/error codes
-    public ComputeResults compute(RawData data) {
+    public List<Integer> compute(List<Integer> data) {
 
         return null;
     }

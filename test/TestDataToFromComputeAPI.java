@@ -1,5 +1,5 @@
 import org.mockito.Mockito;
-
+import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.any;
 
@@ -11,7 +11,7 @@ public class TestDataToFromComputeAPI {
         int mockSource = Mockito.mock(Integer.class);
         ComputeResults mockResult = Mockito.mock(ComputeResults.class);
 
-        when(testAPI.writeData(any(SourceType.class), any(ComputeResults.clas))).thenReturn("Key made");
+        when(testAPI.writeData(any(Integer.class), any(ComputeResults.class))).thenReturn("Key made");
 
         testAPI.writeData(mockSource, mockResult);
     }
@@ -19,6 +19,7 @@ public class TestDataToFromComputeAPI {
     @Test
     public void testRead() throws Exception {
         int mockSource = Mocktio.mock(Integer.class);
+
 
         when(testAPI.readData(any(Integer.class))).thenReturn("Data read");
 

@@ -1,7 +1,9 @@
+import org.junit.Test;
 import org.mockito.Mockito;
 
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.any;
+import java.util.List;
 
 public class TestComputeEngineAPI {
 
@@ -9,10 +11,12 @@ public class TestComputeEngineAPI {
     
     @Test
     public void testComputeEngineAPI() throws Exception {
-        int data = Mockito.mock(RawData.class);
+
+        List<Integer> data = Mockito.mock(List.class);
         ComputeEngineAPI testAPI = new ComputeEngineAPI();
 
-        when(testAPI.compute(any(Integer.class))).thenReturn("Data computed");
+        when(testAPI.compute(any(List.class))).thenReturn("Data computed");
+        GradlePath
  
         testAPI.compute(data);
     }
