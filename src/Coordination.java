@@ -4,6 +4,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.io.IOException;
 
 class Coordination implements UserToCompute {
     //Global variables
@@ -23,21 +24,21 @@ class Coordination implements UserToCompute {
     }
 
     //Methods
-    public List<Integer> read(int key) {
+    public List<Integer> read(int key) throws IOException {
         //Uses Storage to get list from input csv, needs data key
         List<Integer> values = dataAPI.readData(key);
         in = values;
         return in;
     }
 
-    public List<Integer> read() {
+    public List<Integer> read() throws IOException {
         //Method overloading, uses 0 as default
         List<Integer> values = dataAPI.readData(0);
         in = values;
         return in;
     }
 
-    public int write() {
+    public int write() throws IOException {
         //Uses Storage to write list as csv, returns key
         key = dataAPI.writeData(out);
         return key;
