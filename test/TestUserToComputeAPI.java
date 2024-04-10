@@ -39,6 +39,6 @@ public class TestUserToComputeAPI {
     public void testComputeRequest() throws Exception {
         List<Integer> mockCompRequest = Mockito.mock(List.class); 
         when(testAPI.computeRequest(any(List.class))).thenReturn(mockCompRequest);
-        testAPI.computeRequest();
+        testAPI.computeRequest(mockCompRequest);
     }
 }
