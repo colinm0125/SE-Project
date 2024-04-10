@@ -12,13 +12,12 @@ public class TestDataToFromComputeAPI {
     public void testWrite() throws Exception {
         testAPI = new DataToFromComputeAPI();
         
-        int mockSource = Mockito.mock(Integer.class);
         List<Integer> mockResult = Mockito.mock(List.class);
         Integer fake = Mockito.mock(Integer.class);
 
         when(testAPI.writeData(any(List.class))).thenReturn(fake);
 
-        testAPI.writeData(mockResult);
+        int value = testAPI.writeData(mockResult);
     }
 
     @Test
@@ -30,6 +29,6 @@ public class TestDataToFromComputeAPI {
 
         when(testAPI.readData(any(Integer.class))).thenReturn(fakeList);
 
-        testAPI.readData(mockSource);
+        List<Integer> result = testAPI.readData(mockSource);
     }
 }

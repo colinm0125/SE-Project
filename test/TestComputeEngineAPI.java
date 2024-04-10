@@ -16,6 +16,6 @@ public class TestComputeEngineAPI {
 
         when(testAPI.compute(any(List.class))).thenReturn(data);
  
-        testAPI.compute(data);
+        List<Integer> results = testAPI.compute(data);
     }
 }
