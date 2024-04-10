@@ -1,6 +1,5 @@
 import java.io.File;
 import org.mockito.Mockito;
-import org.mockito.Mockito.mock;
 import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.any;
