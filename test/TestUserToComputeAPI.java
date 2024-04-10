@@ -7,17 +7,13 @@ public class TestUserToComputeAPI {
      private UserToComputeAPI testAPI;
 
      public void testSetInputSource() throws Exception {
-
-        List<Integer> sourceMock = Mockito.mock(List.class);
-        when(testAPI.setInputSource(Mockito.anyList())).thenReturn(sourceMock);
+        when(testAPI.setInputSource(Mockito.anyList())).thenReturn(1);
 
         testAPI.setInputSource(sourceMock);
     }
 
     public void testSetOutputDest() throws Exception {
-
-        int outputMock = Mockito.mock(Integer.class);
-        when(testAPI.setOutputDest(Mockito.anyInt())).thenReturn(outputMock);
+        when(testAPI.setOutputDest(Mockito.anyInt())).thenReturn(1);
 
         testAPI.setOutputDest(outputMock);
 
