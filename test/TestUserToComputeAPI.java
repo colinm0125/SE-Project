@@ -8,7 +8,7 @@ public class TestUserToComputeAPI {
 
      public void testSetInputSource() throws Exception {
 
-        List<Integer> sourceMock = Mockito.mock(Integer.class);
+        List<Integer> sourceMock = Mockito.mock(List.class);
         when(testAPI.setInputSource(any(SourceType.class))).thenReturn(sourceMock);
 
         testAPI.setInputSource(sourceMock);
@@ -37,7 +37,7 @@ public class TestUserToComputeAPI {
     }
 
     public void testComputeRequest() throws Exception {
-        List<Integer> mockCompRequest 
+        List<Integer> mockCompRequest = Mockito.mock(List.class); 
         when(testAPI.computeRequest(any(List.class))).thenReturn(mockCompRequest);
         testAPI.computeRequest();
     }
