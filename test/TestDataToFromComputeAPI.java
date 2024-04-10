@@ -14,14 +14,14 @@ public class TestDataToFromComputeAPI {
         ComputeResults mockResult = Mockito.mock(ComputeResults.class);
         List<Integer> fakeList = Mockito.mock(List.class);
 
-        when(testAPI.writeData(any(Integer.class))).thenReturn(fakeList);
+        when(testAPI.writeData(any(List.class))).thenReturn(fakeList);
 
-        testAPI.writeData(0);
+        testAPI.writeData(mockResults);
     }
 
     @Test
     public void testRead() throws Exception {
-        int mockSource = Mocktio.mock(Integer.class);
+        int mockSource = Mockito.mock(Integer.class);
         List<Integer> fakeList = Mockito.mock(List.class);
 
         when(testAPI.readData(any(Integer.class))).thenReturn(fakeList);
