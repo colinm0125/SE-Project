@@ -10,6 +10,8 @@ public class TestDataToFromComputeAPI {
 
     @Test
     public void testWrite() throws Exception {
+        testAPI = new DataToFromComputeAPI();
+        
         int mockSource = Mockito.mock(Integer.class);
         List<Integer> mockResult = Mockito.mock(List.class);
         Integer fake = Mockito.mock(Integer.class);
@@ -21,6 +23,8 @@ public class TestDataToFromComputeAPI {
 
     @Test
     public void testRead() throws Exception {
+        testAPI = new DataToFromComputeAPI();
+        
         int mockSource = Mockito.mock(Integer.class);
         List<Integer> fakeList = Mockito.mock(List.class);
 
