@@ -1,27 +1,31 @@
 import org.mockito.Mockito;
-
+import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.any;
 import org.junit.Test;
+import java.util.List;
+import org.mockito.Mocktio.mock;
 
 public class TestDataToFromComputeAPI {
     private DataToFromComputeAPI testAPI;
 
     @Test
     public void testWrite() throws Exception {
-        SourceType mockSource = Mockito.mock(SourceType.class);
+        int mockSource = Mockito.mock(Integer.class);
         ComputeResults mockResult = Mockito.mock(ComputeResults.class);
+        List<Integer> fakeList = Mockito.mock(List.class);
 
-        when(testAPI.writeData(any(SourceType.class), any(ComputeResults.class))).thenReturn("Key made");
+        when(testAPI.writeData(any(Integer.class)))).thenReturn(fakeList);
 
-        testAPI.writeData(mockSource, mockResult);
+        testAPI.writeData(0);
     }
 
     @Test
     public void testRead() throws Exception {
-        SourceType mockSource = Mockito.mock(SourceType.class);
+        int mockSource = Mocktio.mock(Integer.class);
+        List<Integer> fakeList = Mockito.mcok(List.class);
 
-        when(testAPI.readData(any(SourceType.class))).thenReturn("Data read");
+        when(testAPI.readData(any(Integer.class))).thenReturn(fakeList);
 
         testAPI.readData(mockSource);
     }
