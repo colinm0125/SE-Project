@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.any;
 import java.util.List;
-import org.mockito.Mockito.mock;
+import static org.mockito.Mockito.mock;
 
 public class TestDataToFromComputeAPI {
     private DataToFromComputeAPI testAPI;
@@ -11,7 +11,7 @@ public class TestDataToFromComputeAPI {
     @Test
     public void testWrite() throws Exception {
         int mockSource = Mockito.mock(Integer.class);
-        ComputeResults mockResult = Mockito.mock(ComputeResults.class);
+        List<Integer> mockResult = Mockito.mock(List.class);
         List<Integer> fakeList = Mockito.mock(List.class);
 
         when(testAPI.writeData(any(List.class))).thenReturn(fakeList);
