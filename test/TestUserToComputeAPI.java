@@ -9,7 +9,7 @@ public class TestUserToComputeAPI {
      public void testSetInputSource() throws Exception {
 
         List<Integer> sourceMock = Mockito.mock(List.class);
-        when(testAPI.setInputSource(any(SourceType.class))).thenReturn(sourceMock);
+        when(testAPI.setInputSource(any(List.class))).thenReturn(sourceMock);
 
         testAPI.setInputSource(sourceMock);
     }
