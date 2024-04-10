@@ -14,6 +14,6 @@ public class ComputeEngineAPI implements ComputeEngine{
     //inputs raw data and fetches results/error codes
     public List<Integer> compute(List<Integer> data) {
 
-        return null;
+        return data;
     }
 }
