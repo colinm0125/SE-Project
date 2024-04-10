@@ -1,3 +1,6 @@
+import java.util.List;
+import java.io.IOException;
+
 public class DataToFromComputeAPI implements DataToFromCompute {
     //Object Instances
     SourceType sourceType;
@@ -12,14 +15,14 @@ public class DataToFromComputeAPI implements DataToFromCompute {
     }
 
     //A method to read the data from the source
-    public RawData readData(SourceType sourceType) {
+    public List<Integer> readData(int key) throws IOException {
 
         return null;
     }
 
     //A method to write to the output source
-    public DataKey writeData(ComputeResults compute, SourceType sourceType) {
+    public int writeData(List<Integer> result) throws IOException {
 
-        return null;
+        return 0;
     }
 }

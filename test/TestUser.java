@@ -1,4 +1,8 @@
 import java.io.File;
+import org.mockito.Mockito;
+import org.junit.jupiter.api.Test;
+import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.any;
 
 
 public class TestUser {
@@ -12,13 +16,14 @@ public class TestUser {
 	}
 
 	public void run(String outputPath) {
-		char delimiter = ',';
+		UserDelimeter delimeter = new Mockito.mock(UserDelimeter.class);
 		String inputPath = "test" + File.separatorChar + "testInputFile.csv";
+		List<Integer> fakeList = new Mockito.mock(List.class);
 
-		coordinator.setInputSource(inputPath);
-		coordinator.setOutputDest();
+		coordinator.setInputSource(fakeList);
+		coordinator.setOutputDest(0);
 		coordinator.setDelimeter(delimeter);
-		coordinator.computeRequest();
+		coordinator.computeRequest(fakeList);
 		// TODO 4: Call the appropriate method(s) on the coordinator to get it to 
 		// run the compute job specified by inputPath, outputPath, and delimiter
 	}
