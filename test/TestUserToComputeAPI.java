@@ -9,7 +9,7 @@ public class TestUserToComputeAPI {
      public void testSetInputSource() throws Exception {
 
         List<Integer> sourceMock = Mockito.mock(List.class);
-        when(testAPI.setInputSource(anyList())).thenReturn(sourceMock);
+        when(testAPI.setInputSource(Mockito.anyList())).thenReturn(sourceMock);
 
         testAPI.setInputSource(sourceMock);
     }
@@ -17,7 +17,7 @@ public class TestUserToComputeAPI {
     public void testSetOutputDest() throws Exception {
 
         int outputMock = Mockito.mock(Integer.class);
-        when(testAPI.setOutputDest(anyInt())).thenReturn(outputMock);
+        when(testAPI.setOutputDest(Mockito.anyInt())).thenReturn(outputMock);
 
         testAPI.setOutputDest(outputMock);
 
@@ -38,7 +38,7 @@ public class TestUserToComputeAPI {
 
     public void testComputeRequest() throws Exception {
         List<Integer> mockCompRequest = Mockito.mock(List.class); 
-        when(testAPI.computeRequest(anyList())).thenReturn(mockCompRequest);
+        when(testAPI.computeRequest(Mockito.anyList())).thenReturn(mockCompRequest);
         testAPI.computeRequest(mockCompRequest);
     }
 }
