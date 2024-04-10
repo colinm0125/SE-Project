@@ -2,9 +2,8 @@ import org.mockito.Mockito;
 import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.any;
-import org.junit.Test;
 import java.util.List;
-import org.mockito.Mocktio.mock;
+import org.mockito.Mockito.mock;
 
 public class TestDataToFromComputeAPI {
     private DataToFromComputeAPI testAPI;
@@ -15,7 +14,7 @@ public class TestDataToFromComputeAPI {
         ComputeResults mockResult = Mockito.mock(ComputeResults.class);
         List<Integer> fakeList = Mockito.mock(List.class);
 
-        when(testAPI.writeData(any(Integer.class)))).thenReturn(fakeList);
+        when(testAPI.writeData(any(Integer.class))).thenReturn(fakeList);
 
         testAPI.writeData(0);
     }
@@ -23,7 +22,7 @@ public class TestDataToFromComputeAPI {
     @Test
     public void testRead() throws Exception {
         int mockSource = Mocktio.mock(Integer.class);
-        List<Integer> fakeList = Mockito.mcok(List.class);
+        List<Integer> fakeList = Mockito.mock(List.class);
 
         when(testAPI.readData(any(Integer.class))).thenReturn(fakeList);
 
