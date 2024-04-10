@@ -16,7 +16,7 @@ public class TestDataToFromComputeAPI {
 
         when(testAPI.writeData(any(List.class))).thenReturn(fakeList);
 
-        testAPI.writeData(mockResults);
+        testAPI.writeData(mockResult);
     }
 
     @Test
