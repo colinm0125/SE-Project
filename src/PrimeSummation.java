@@ -64,21 +64,5 @@ public class PrimeSummation {
         }
         return new PrimeSumResult(results, resultsSize);
     }
-        
-    public static void main(String[] args) {
-        String fileName = "primes.txt";
-        
-        initializePrimes(fileName);
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter integers (enter -1 to exit):");
-        int input;
-        while ((input = scanner.nextInt()) != -1) {
-            totalSummations = 0; // Reset total summations for each input
-            List<Integer> intermediateResult = new ArrayList<>();
-            primeSum(input, 1, intermediateResult);
-            System.out.println("Total prime summations for " + input + ": " + totalSummations);
-        }
-        scanner.close();
-    }
 }
