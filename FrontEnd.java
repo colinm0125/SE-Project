@@ -6,7 +6,7 @@ public class FrontEnd {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter the delimeter: ");
-        if(in.nextLine()!=null) {
+        if (in.nextLine()!=null) {
             char delim = in.next().charAt(0);
         }
         else {
