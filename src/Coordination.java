@@ -55,20 +55,6 @@ class Coordination implements UserToCompute {
         return key;
     }
 
-
-    //Delim will be , for now
-    public UserDelimeter setDelimeter(UserDelimeter inputDelim, UserDelimeter outputDelim) {
-
-        return null;
-    }
-
-    //Method overload
-    public UserDelimeter setDelimeter(UserDelimeter delim) {
-        setDelimeter(delim, delim);
-        return delim;
-    }
-
-
     public List<Integer> getOutput() throws IOException {
         return read();
     }

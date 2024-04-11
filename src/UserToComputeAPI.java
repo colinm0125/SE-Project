@@ -3,17 +3,13 @@ import java.io.IOException;
 
 public class UserToComputeAPI implements UserToCompute{
     //Object instances
-    SourceType source;
+    List<Integer> source;
     int dest;
-    UserDelimeter inputDelim, outputDelim;
-    RawData input;
+    List<Integer> input;
 
     //Constructors
-    public UserToComputeAPI(SourceType source, int dest, UserDelimeter inputDelim, UserDelimeter outputDelim, RawData input) {
-        this.source = source;
+    public UserToComputeAPI(int dest, List<Integer> input) {
         this.dest = dest;
-        this.inputDelim = inputDelim;
-        this.outputDelim = outputDelim;
         this.input = input;
     }
     public UserToComputeAPI() {
@@ -30,18 +26,6 @@ public class UserToComputeAPI implements UserToCompute{
     public int setOutputDest(int dest){
 
         return dest;
-    }
-
-    //Method to set custom delimeters
-    public UserDelimeter setDelimeter(UserDelimeter inputDelim, UserDelimeter outputDelim) {
-
-        return null;
-    }
-
-    //Method overload
-    public UserDelimeter setDelimeter(UserDelimeter delim) {
-        setDelimeter(delim, delim);
-        return delim;
     }
 
     //Method to call the computation prime summations
