@@ -1,3 +1,5 @@
+import java.util.List;
+
 class InputConfig {
     List<Integer> in;
 

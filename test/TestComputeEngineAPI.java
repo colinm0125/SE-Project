@@ -1,19 +1,28 @@
 import org.mockito.Mockito;
-
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.any;
+import static org.mockito.Mockito.mock;
+import java.util.List;
+import java.util.ArrayList;
+import org.junit.jupiter.api.Test;
+import static org.mockito.ArgumentMatchers.anyList; 
 
 public class TestComputeEngineAPI {
 
-    ComputeEngineAPI testAPI;
+    ComputeEngineAPI testAPI = Mockito.mock(ComputeEngineAPI.class);
     
     @Test
     public void testComputeEngineAPI() throws Exception {
-        RawData data = Mockito.mock(RawData.class);
+
+
+        List<Integer> data = new ArrayList<Integer>();
+        data.add(3);
+        data.add(1);
         ComputeEngineAPI testAPI = new ComputeEngineAPI();
 
-        when(testAPI.compute(any(RawData.class))).thenReturn("Data computed");
+        when(testAPI.compute(anyList())).thenReturn(data);
+
  
-        testAPI.compute(data);
+        List<Integer> results = testAPI.compute(data);
     }
 }

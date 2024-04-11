@@ -4,6 +4,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.io.IOException;
 
 class Coordination implements UserToCompute {
     //Global variables
@@ -23,58 +24,44 @@ class Coordination implements UserToCompute {
     }
 
     //Methods
-    public List<Integer> read(int key) {
+    public List<Integer> read(int key) throws IOException {
         //Uses Storage to get list from input csv, needs data key
-        ArrayList<Integer> values = dataAPI.readData(key);
+        List<Integer> values = dataAPI.readData(key);
         in = values;
         return in;
     }
 
-    public List<Integer> read() {
+    public List<Integer> read() throws IOException {
         //Method overloading, uses 0 as default
-        ArrayList<Integer> values = dataAPI.readData(0);
+        List<Integer> values = dataAPI.readData(0);
         in = values;
         return in;
     }
 
-    public int write() {
+    public int write() throws IOException {
         //Uses Storage to write list as csv, returns key
-        key = dataAPI.writeData(out, key);
+        key = dataAPI.writeData(out);
         return key;
     }
 
     //Implementations
-    public SourceType setInputSource(SourceType source) {
+    public List<Integer> setInputSource(List<Integer> source) {
 
         in = source;
         return in;
     }
 
-    public OutputDest setOutputDest(OutputDest dest) {
+    public int setOutputDest(int dest) {
         return key;
     }
 
-
-    //Delim will be , for now
-    public UserDelimeter setDelimeter(UserDelimeter inputDelim, UserDelimeter outputDelim) {
-
-        return null;
-    }
-
-    //Method overload
-    public UserDelimeter setDelimeter(UserDelimeter delim) {
-        setDelimeter(delim, delim);
-        return delim;
-    }
-
-
-    public SourceType getOutput() {
+    public List<Integer> getOutput() throws IOException {
         return read();
     }
 
 
-    public ComputeResults computeRequest(List<Integer> input) {
-        in = data;
+    public List<Integer> computeRequest(List<Integer> input) {
+        in = input;
 
         //Multithreading this program doesnt do much,
         //maybe better to have this method input just a single int

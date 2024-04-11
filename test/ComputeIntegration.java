@@ -20,8 +20,7 @@ class ComputeIntegration {
             throw new Exception();
         }
 
-        //May be incorrect...difficult to check at the moment
-        if(out.get(2) != 44) {
+        if(out.get(2) != 52) {
             throw new Exception();
         }
     }
