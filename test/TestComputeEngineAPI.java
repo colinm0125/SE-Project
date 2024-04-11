@@ -15,7 +15,7 @@ public class TestComputeEngineAPI {
         List<Integer> data = Mockito.mock(List.class);
         ComputeEngineAPI testAPI = new ComputeEngineAPI();
 
-        when(testAPI.compute(Mockito.anyList())).thenReturn(data);
+        when(testAPI.compute(data)).thenReturn(data);
  
         List<Integer> results = testAPI.compute(data);
     }
