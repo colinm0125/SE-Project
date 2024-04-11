@@ -8,10 +8,6 @@ public interface UserToCompute {
     //Method to set output destination for prime summation
     int setOutputDest(int dest);
 
-    //Method to set custom delimeters
-    //Possible method overloading in future
-    UserDelimeter setDelimeter(UserDelimeter inputDelim, UserDelimeter outputDelim);
-
     //Method to call the computation prime summations
     List<Integer> getOutput() throws IOException;
 

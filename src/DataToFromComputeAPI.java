@@ -3,26 +3,27 @@ import java.io.IOException;
 
 public class DataToFromComputeAPI implements DataToFromCompute {
     //Object Instances
-    SourceType sourceType;
-    ComputeResults compute;
+    int sourceType;
+    List<Integer> compute;
+    Storage store;
 
     //Constructor
-    public DataToFromComputeAPI(SourceType sourceType, ComputeResults compute) {
+    public DataToFromComputeAPI(int sourceType, List<Integer> compute) {
         this.sourceType = sourceType;
         this.compute = compute;
+        store = new Storage();
     }
     public DataToFromComputeAPI() {
+        store = new Storage();
     }
 
     //A method to read the data from the source
     public List<Integer> readData(int key) throws IOException {
-
-        return null;
+        return store.readData(key);
     }
 
     //A method to write to the output source
     public int writeData(List<Integer> result) throws IOException {
-
-        return 0;
+        return store.writeData(result);
     }
 }
