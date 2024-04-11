@@ -14,7 +14,7 @@ public class TestDataToFromComputeAPI {
         
         List<Integer> mockResult = Mockito.mock(List.class);
 
-        when(testAPI.writeData(Mockito.anyList())).thenReturn(1);
+        when(testAPI.writeData(mockResult)).thenReturn(1);
 
         int value = testAPI.writeData(mockResult);
     }
