@@ -23,10 +23,10 @@ public class TestDataToFromComputeAPI {
     public void testRead() throws Exception {
         testAPI = new DataToFromComputeAPI();
         
-        int mockSource = Mockito.mock(Integer.class);
+        int mockSource = 69;
         List<Integer> fakeList = Mockito.mock(List.class);
 
-        when(testAPI.readData(Mockito.anyInt())).thenReturn(fakeList);
+        when(testAPI.readData(mockSource)).thenReturn(fakeList);
 
         List<Integer> result = testAPI.readData(mockSource);
     }
