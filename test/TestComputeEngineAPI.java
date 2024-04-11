@@ -9,10 +9,11 @@ import static org.mockito.ArgumentMatchers.anyList;
 
 public class TestComputeEngineAPI {
 
-    ComputeEngineAPI testAPI;
+    ComputeEngineAPI testAPI = Mockito.mock(ComputeEngineAPI.class);
     
     @Test
     public void testComputeEngineAPI() throws Exception {
+
 
         List<Integer> data = new ArrayList<Integer>();
         data.add(3);
@@ -20,6 +21,7 @@ public class TestComputeEngineAPI {
         ComputeEngineAPI testAPI = new ComputeEngineAPI();
 
         when(testAPI.compute(anyList())).thenReturn(data);
+
  
         List<Integer> results = testAPI.compute(data);
     }

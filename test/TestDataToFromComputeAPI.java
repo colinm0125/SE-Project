@@ -18,7 +18,9 @@ public class TestDataToFromComputeAPI {
         List<Integer> mockResult = new ArrayList<Integer>();
         mockResult.add(42);
 
+
         when(testAPI.writeData(anyList())).thenReturn(0);
+
 
         int value = testAPI.writeData(mockResult);
     }
@@ -27,10 +29,12 @@ public class TestDataToFromComputeAPI {
     public void testRead() throws Exception {
         testAPI = new DataToFromComputeAPI();
 
+
         List<Integer> fakeList = new ArrayList<Integer>();
         fakeList.add(42);
 
         when(testAPI.readData(anyInt())).thenReturn(fakeList);
+
 
         List<Integer> result = testAPI.readData(1);
     }

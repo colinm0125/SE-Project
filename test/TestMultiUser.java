@@ -22,7 +22,7 @@ public class TestMultiUser {
 		//TODO 2: create an instance of your coordinator component; this is the component DONE
 		// that the user will make requests to
 		// Store it in the 'coordinator' instance variable
-		Coordination coordination = new Coordination();
+		Coordination coordinator = new Coordination();
 	}
 
 	@Test
