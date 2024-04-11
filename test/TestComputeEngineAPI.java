@@ -7,7 +7,7 @@ import static org.mockito.ArgumentMatchers.anyList;
 
 public class TestComputeEngineAPI {
 
-    ComputeEngineAPI testAPI;
+    ComputeEngineAPI testAPI = Mockito.mock(ComputeEngineAPI.class);
     
     @Test
     public void testComputeEngineAPI() throws Exception {
