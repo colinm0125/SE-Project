@@ -13,7 +13,6 @@ public class TestComputeEngineAPI {
     public void testComputeEngineAPI() throws Exception {
 
         List<Integer> data = Mockito.mock(List.class);
-        ComputeEngineAPI testAPI = new ComputeEngineAPI();
 
         when(testAPI.compute(data)).thenReturn(data);
  
