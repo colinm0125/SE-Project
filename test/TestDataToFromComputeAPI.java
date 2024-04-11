@@ -2,8 +2,11 @@ import org.mockito.Mockito;
 import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.any;
+import java.util.ArrayList;
 import java.util.List;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.anyList;
+import static org.mockito.Mockito.anyInt;
 
 public class TestDataToFromComputeAPI {
     private DataToFromComputeAPI testAPI;
@@ -12,9 +15,10 @@ public class TestDataToFromComputeAPI {
     public void testWrite() throws Exception {
         testAPI = new DataToFromComputeAPI();
         
-        List<Integer> mockResult = Mockito.mock(List.class);
+        List<Integer> mockResult = new ArrayList<Integer>();
+        mockResult.add(42);
 
-        when(testAPI.writeData(Mockito.anyList())).thenReturn(1);
+        when(testAPI.writeData(anyList())).thenReturn(0);
 
         int value = testAPI.writeData(mockResult);
     }
@@ -22,12 +26,12 @@ public class TestDataToFromComputeAPI {
     @Test
     public void testRead() throws Exception {
         testAPI = new DataToFromComputeAPI();
-        
-        int mockSource = Mockito.mock(Integer.class);
-        List<Integer> fakeList = Mockito.mock(List.class);
 
-        when(testAPI.readData(Mockito.anyInt())).thenReturn(fakeList);
+        List<Integer> fakeList = new ArrayList<Integer>();
+        fakeList.add(42);
 
-        List<Integer> result = testAPI.readData(mockSource);
+        when(testAPI.readData(anyInt())).thenReturn(fakeList);
+
+        List<Integer> result = testAPI.readData(1);
     }
 }
