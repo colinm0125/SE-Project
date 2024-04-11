@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service DataToFromComputeAPI {
+  rpc read (readData) returns (writeData) {}
+}
+
+message readData {
+  int32 key = 1;
+}
+
+message writeData {
+  repeated int32 data = 1;
+}
