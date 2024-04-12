@@ -2,8 +2,8 @@
 // source: userProtoList.proto
 
 // Protobuf Java Version: 3.25.2
+ @SuppressWarnings("all")
 public final class UserProtoList {
-  @SuppressWarnings("unchecked")
   private UserProtoList() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
