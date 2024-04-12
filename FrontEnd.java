@@ -17,14 +17,12 @@ public class FrontEnd {
             DataToFromComputeAPI data = new DataToFromComputeAPI();
             List<Integer> list = data.readData(path);
             computeResults(list);
-        }
-        else if(inputType==2) {
+        } else if(inputType==2) {
             //Receive input from user
             System.out.println("Enter the delimeter: ");
             if(in.nextLine()!=null) {
                 delim = in.next().charAt(0);
-            }
-            else {
+            } else {
                 delim = ',';
             }
             System.out.println("Enter list of positive non zero integers, separated by chosen delimeter: ");
@@ -37,8 +35,7 @@ public class FrontEnd {
             }
             
             computeResults(list);
-        }
-        else {
+        } else {
             System.out.println("Invalid input. Please enter 1 or 2.");
         }
 
@@ -47,8 +44,7 @@ public class FrontEnd {
         System.out.println("Enter the output delimeter (If nothing entered, input delimeter will be used): ");
         if(in.nextLine()!=null) {
             delim = in.next().charAt(0);
-        }
-        else {
+        } else {
             delim = ',';
         }
         
