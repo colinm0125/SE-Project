@@ -33,6 +33,7 @@ public class PrimeSummation {
         }
     }
 
+
     public static boolean isPrime(int n) {
         if (n <= 1) {
             return false;
@@ -45,3 +46,4 @@ public class PrimeSummation {
         return true;
     }
 }
+
