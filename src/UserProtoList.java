@@ -3,6 +3,7 @@
 
 // Protobuf Java Version: 3.25.2
 public final class UserProtoList {
+  @SuppressWarnings("unchecked")
   private UserProtoList() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
