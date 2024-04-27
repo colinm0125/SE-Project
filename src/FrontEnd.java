@@ -4,7 +4,7 @@ import java.util.List;
 import java.io.IOException;
 
 public class FrontEnd {
-    public static void main(String[] args) throw IOException {
+    public static void main(String[] args) throws IOException {
         List<Integer> dummyList = new ArrayList<Integer>();
         char delim = ' ';
         Coordination coordinator = new Coordination();
