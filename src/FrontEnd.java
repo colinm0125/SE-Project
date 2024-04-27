@@ -4,7 +4,7 @@ import java.util.List;
 
 public class FrontEnd {
     public static void main(String[] args) {
-        ArrayList<Integer> dummyList = new ArrayList<Integer>();
+        List<Integer> dummyList = new ArrayList<Integer>();
         char delim = ' ';
         Coordination coordinator = new Coordination();
         Scanner in = new Scanner(System.in);
