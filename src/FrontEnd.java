@@ -4,7 +4,7 @@ import java.util.List;
 
 public class FrontEnd {
     public static void main(String[] args) {
-        ArrayList<Integer> dummyList = new ArrayList<Integer>
+        ArrayList<Integer> dummyList = new ArrayList<Integer>();
         char delim = ' ';
         Scanner in = new Scanner(System.in);
         System.out.println("Enter the source type. Enter 1 for file, Enter 2 for manual input: ");
