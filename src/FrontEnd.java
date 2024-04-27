@@ -4,6 +4,7 @@ import java.util.List;
 
 public class FrontEnd {
     public static void main(String[] args) {
+        ArrayList<Integer> dummyList = new ArrayList<Integer>
         char delim = ' ';
         Scanner in = new Scanner(System.in);
         System.out.println("Enter the source type. Enter 1 for file, Enter 2 for manual input: ");
@@ -15,7 +16,7 @@ public class FrontEnd {
             String path = in.next();
             DataToFromComputeAPI data = new DataToFromComputeAPI();
             List<Integer> list = data.readData(path);
-            computeResults(list);
+            dummyList = Coordination.computeRequest(list);
         } else if(inputType==2) {
             //Receive input from user
             System.out.println("Enter the delimeter: ");
@@ -33,7 +34,7 @@ public class FrontEnd {
                 list.add(value);
             }
             
-            computeResults(list);
+            dummyList = Coordination.computeRequest(list);
         } else {
             System.out.println("Invalid input. Please enter 1 or 2.");
         }
