@@ -1,37 +1,44 @@
 import org.mockito.Mockito;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.any;
+import static org.mockito.Mockito.anyList;
+import static org.mockito.Mockito.anyInt;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TestUserToComputeAPI {
      private UserToComputeAPI testAPI;
 
      public void testSetInputSource() throws Exception {
-        SourceType sourceMock=Mockito.mock(SourceType.class);
-        when(testAPI.setInputSource(any(SourceType.class))).thenReturn("Setting Input Success");
-        testAPI.setInputSource(sourceMock);
+         List<Integer> mockInSource = new ArrayList<Integer>();
+         mockInSource.add(3);
+         mockInSource.add(1);
+        when(testAPI.setInputSource(anyList())).thenReturn(mockInSource);
+
+        testAPI.setInputSource(mockInSource);
     }
 
     public void testSetOutputDest() throws Exception {
-        OutputDest outputMock=Mockito.mock(OutputDest.class);
-        when(testAPI.setOutputDest(any(OutputDest.class))).thenReturn("Setting Output Dest Success");
-        testAPI.setOutputDest(outputMock);
+        when(testAPI.setOutputDest(anyInt())).thenReturn(1);
 
-    }
+        testAPI.setOutputDest(10);
 
-    public void testSetDelimeter() throws Exception {
-        UserDelimeter inputDelimMock=Mockito.mock(UserDelimeter.class); 
-        UserDelimeter outputDelimMock=Mockito.mock(UserDelimeter.class); 
-        when(testAPI.setDelimeter(any(UserDelimeter.class))).thenReturn("Setting delimeter success");
-        testAPI.setDelimeter(inputDelimMock,outputDelimMock);
     }
 
     public void testGetOutput() throws Exception {
-        when(testAPI.getOutput()).thenReturn("Output :)");
+        List<Integer> outMock = new ArrayList<Integer>();
+        outMock.add(3);
+        outMock.add(1);
+        when(testAPI.getOutput()).thenReturn(outMock);
         testAPI.getOutput();
     }
 
     public void testComputeRequest() throws Exception {
-        when(testAPI.computeRequest(any(RawData.class))).thenReturn("Compute Request success");
-        testAPI.computeRequest();
+        List<Integer> mockCompRequest = new ArrayList<Integer>();
+        mockCompRequest.add(3);
+        mockCompRequest.add(1);
+        when(testAPI.computeRequest(Mockito.anyList())).thenReturn(mockCompRequest);
+        testAPI.computeRequest(mockCompRequest);
     }
 }

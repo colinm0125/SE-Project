@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service userToFromComputeAPI {
+  rpc userProto (computeRequest) returns (getOutput) {}
+}
+
+message computeRequest {
+  repeated int32 data = 1;
+}
+
+message getOutput {
+  repeated int32 data =1;
+}

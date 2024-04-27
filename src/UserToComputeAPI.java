@@ -1,16 +1,15 @@
+import java.util.List;
+import java.io.IOException;
+
 public class UserToComputeAPI implements UserToCompute{
     //Object instances
-    SourceType source;
-    OutputDest dest;
-    UserDelimeter inputDelim, outputDelim;
-    RawData input;
+    List<Integer> source;
+    int dest;
+    List<Integer> input;
 
     //Constructors
-    public UserToComputeAPI(SourceType source, OutputDest dest, UserDelimeter inputDelim, UserDelimeter outputDelim, RawData input) {
-        this.source = source;
+    public UserToComputeAPI(int dest, List<Integer> input) {
         this.dest = dest;
-        this.inputDelim = inputDelim;
-        this.outputDelim = outputDelim;
         this.input = input;
     }
     public UserToComputeAPI() {
@@ -18,37 +17,25 @@ public class UserToComputeAPI implements UserToCompute{
     }
 
     //Method to set input source
-    public SourceType setInputSource(SourceType source) {
+    public List<Integer> setInputSource(List<Integer> source) {
 
         return source;
     }
 
     //Method to set output destination for prime summation
-    public OutputDest setOutputDest(OutputDest dest){
+    public int setOutputDest(int dest){
 
         return dest;
     }
 
-    //Method to set custom delimeters
-    public UserDelimeter setDelimeter(UserDelimeter inputDelim, UserDelimeter outputDelim) {
-
-        return null;
-    }
-
-    //Method overload
-    public UserDelimeter setDelimeter(UserDelimeter delim) {
-        setDelimeter(delim, delim);
-        return delim;
-    }
-
     //Method to call the computation prime summations
-    public SourceType getOutput() {
+    public List<Integer> getOutput() throws IOException {
 
         return null;
     }
 
     //Computes and returns the data based off of compute engine
-    public ComputeResults computeRequest(RawData input) {
+    public List<Integer> computeRequest(List<Integer> input) {
 
         return null;
     }

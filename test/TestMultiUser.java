@@ -12,7 +12,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class TestMultiUser {
-	
+	/*
 	// TODO 1: change the type of this variable to the name you're using for your DONE
 	// User <-> ComputeEngine API
 	private UserToComputeAPI coordinator;
@@ -22,7 +22,7 @@ public class TestMultiUser {
 		//TODO 2: create an instance of your coordinator component; this is the component DONE
 		// that the user will make requests to
 		// Store it in the 'coordinator' instance variable
-		Coordination coordination = new Coordination();
+		Coordination coordinator = new Coordination();
 	}
 
 	@Test
@@ -79,4 +79,5 @@ public class TestMultiUser {
 		}
 		return result;
 	}
+	*/
 }

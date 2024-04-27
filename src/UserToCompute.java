@@ -1,17 +1,16 @@
+import java.util.List;
+import java.io.IOException;
+
 public interface UserToCompute {
     //Method to set input source
-    SourceType setInputSource(SourceType source);
+    List<Integer> setInputSource(List<Integer> source);
     
     //Method to set output destination for prime summation
-    OutputDest setOutputDest(OutputDest dest);
-
-    //Method to set custom delimeters
-    //Possible method overloading in future
-    UserDelimeter setDelimeter(UserDelimeter inputDelim, UserDelimeter outputDelim);
+    int setOutputDest(int dest);
 
     //Method to call the computation prime summations
-    SourceType getOutput();
+    List<Integer> getOutput() throws IOException;
 
     //Comutes and returns the data based off of compute engine
-    ComputeResults computeRequest(RawData input);
+    List<Integer> computeRequest(List<Integer> input);
 }
