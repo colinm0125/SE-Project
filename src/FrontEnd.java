@@ -1,7 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
-import packageName.DataToFromComputeAPI;
 
 public class FrontEnd {
     public static void main(String[] args) {
