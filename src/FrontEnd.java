@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FrontEnd {
-    public static void main(String[] args) {
+    public static void main(String[] args) throw IOException {
         List<Integer> dummyList = new ArrayList<Integer>();
         char delim = ' ';
         Coordination coordinator = new Coordination();
