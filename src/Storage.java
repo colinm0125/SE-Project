@@ -44,4 +44,28 @@ class Storage implements DataToFromCompute {
         in.close();
         return result;
     }
+    public List<Integer> readData(String path) throws IOException {
+        List<Integer> result = new ArrayList<Integer>();
+
+        //confirm file is csv
+        String fileType = path.substring(path.length()-4);
+        if(!fileType.equals(".csv")) {
+            System.out.println("File not a csv");
+            return NULL; 
+        }
+        
+        File f = new File(path);
+        Scanner in = new Scanner(f);
+
+        while(in.hasNextLine()) {
+            String line=in.nextLine();
+            String[] temp=line.split(",");
+            for(String hold : temp)  {
+                result.add(Integer.parseInt(hold.trim()));
+            }
+        }
+
+        in.close();
+        return result;
+    }
 }
