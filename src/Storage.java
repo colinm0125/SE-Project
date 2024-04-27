@@ -51,7 +51,7 @@ class Storage implements DataToFromCompute {
         String fileType = path.substring(path.length()-4);
         if(!fileType.equals(".csv")) {
             System.out.println("File not a csv");
-            return NULL; 
+            return null; 
         }
         
         File f = new File(path);
