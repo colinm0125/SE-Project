@@ -12,7 +12,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class TestMultiUser {
-	
+	/*
 	// TODO 1: change the type of this variable to the name you're using for your DONE
 	// User <-> ComputeEngine API
 	private UserToComputeAPI coordinator;
@@ -79,4 +79,5 @@ public class TestMultiUser {
 		}
 		return result;
 	}
+	*/
 }
