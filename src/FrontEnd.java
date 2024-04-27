@@ -1,11 +1,13 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
-import packageName.DataToFromComputeAPI;
+import java.io.IOException;
 
 public class FrontEnd {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        List<Integer> dummyList = new ArrayList<Integer>();
         char delim = ' ';
+        Coordination coordinator = new Coordination();
         Scanner in = new Scanner(System.in);
         System.out.println("Enter the source type. Enter 1 for file, Enter 2 for manual input: ");
         int inputType=in.nextInt();
@@ -16,7 +18,7 @@ public class FrontEnd {
             String path = in.next();
             DataToFromComputeAPI data = new DataToFromComputeAPI();
             List<Integer> list = data.readData(path);
-            computeResults(list);
+            dummyList = coordinator.computeRequest(list);
         } else if(inputType==2) {
             //Receive input from user
             System.out.println("Enter the delimeter: ");
@@ -34,7 +36,7 @@ public class FrontEnd {
                 list.add(value);
             }
             
-            computeResults(list);
+            dummyList = coordinator.computeRequest(list);
         } else {
             System.out.println("Invalid input. Please enter 1 or 2.");
         }
