@@ -22,6 +22,10 @@ public class DataToFromComputeAPI implements DataToFromCompute {
         return store.readData(key);
     }
 
+    public List<Integer> readData(String fileName) throws IOException {
+        return store.readData(fileName) throws IOException
+    }
+
     //A method to write to the output source
     public int writeData(List<Integer> result) throws IOException {
         return store.writeData(result);
