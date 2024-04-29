@@ -2,10 +2,10 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class performanceTest {
+public class PerformanceTest {
 
     @Test
-    public void SpeedTest() {
+    public void speedTest() {
         Coordination cord = new Coordination();
         List<Integer> in = new ArrayList<Integer>();
         List<Integer> out = new ArrayList<Integer>();
