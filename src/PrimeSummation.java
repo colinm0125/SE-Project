@@ -7,16 +7,12 @@ public class PrimeSummation {
 
     }
 
-    public int master(int n) {
-        List<List<Integer>> primeSums = computePrimeSums(n);
-        return primeSums.size();
-    }
 
-    public static List<List<Integer>> computePrimeSums(int n) {
+    public static int computePrimeSums(int n) {
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> currentSum = new ArrayList<>();
         generatePrimeSums(result, currentSum, n, 2);
-        return result;
+        return result.size();
     }
 
     public static void generatePrimeSums(List<List<Integer>> result, List<Integer> currentSum, int remaining, int start) {
