@@ -11,3 +11,6 @@ Output: 2
 
 Created an upper bound for the threading to be 40 since the computation
 is memory intensive.
+
+PerformanceTest in the test folder was used to test an average speed for a definitive computation for both the coordination 
+componant and the compute engine. The coordination comonant ran at 4ms and the compute engine at 18ms.
