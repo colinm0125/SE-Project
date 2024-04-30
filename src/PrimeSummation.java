@@ -8,9 +8,6 @@ public class PrimeSummation {
     public PrimeSummation() {
 
     }
-    //Create a cache to store calculated values. Allows us to avoid redundant calculations.
-    private static Map<Integer,List<List<Integer>>> memoizationCache = new HashMap<>();
-
 
     public static int computePrimeSums(int n) {
         List<List<Integer>> result = new ArrayList<>();
@@ -24,14 +21,10 @@ public class PrimeSummation {
             result.add(new ArrayList<>(currentSum));
             return;
         }
-        //check the cache to see if we already have the value saved.
-        if(memoizationCache.containsKey(remaining)) {
-            for(List<Integer> cachedResult : memoizationCache.get(remaining)) {
-                result.add(new ArrayList<>(cachedResult));
-            }
+        //pruning
+        if(remaining < start || !hasPrimeGreaterThan(remaining)) {
             return;
         }
-
 
         for (int i = start; i <= remaining; i++) {
             if (isPrime(i)) {
@@ -40,8 +33,6 @@ public class PrimeSummation {
                 currentSum.remove(currentSum.size() - 1);
             }
         }
-        //put the new result in the cache for potential future use
-        memoizationCache.put(remaining, new ArrayList<>(result));
     }
 
 
@@ -56,5 +47,15 @@ public class PrimeSummation {
         }
         return true;
     }
+
+    public static boolean hasPrimeGreaterThan(int n) {
+        for(int i=n+1; ;i++) {
+            if(isPrime(i)) {
+                return true;
+            }
+        }
+    }
 }
+
+
 
