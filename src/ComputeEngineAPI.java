@@ -19,7 +19,7 @@ public class ComputeEngineAPI implements ComputeEngine{
         PrimeSummation calculator = new PrimeSummation();
         List<Integer> out = new ArrayList<Integer>();
         for(int i=0; i<data.size()-1; i++) {
-            out.add(calculator.master(data.get(i)));
+            out.add(calculator.computePrimeSums(data.get(i)));
         }
         return out;
     }
