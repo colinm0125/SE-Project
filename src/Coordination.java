@@ -15,12 +15,14 @@ class Coordination implements UserToCompute {
     private int key;
 
     //Constructors
-    public Coordination(ComputeEngineAPI computeAPI) {
+    public Coordination(ComputeEngineAPI computeAPI, DataToFromComputeAPI dataAPI) {
         this.computeAPI = computeAPI;
+        this.dataAPI = dataAPI;
     }
 
     public Coordination() {
         computeAPI = new ComputeEngineAPI();
+        dataAPI = new DataToFromComputeAPI();
     }
 
     //Methods
