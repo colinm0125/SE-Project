@@ -40,15 +40,6 @@ public class FrontEnd {
         } else {
             System.out.println("Invalid input. Please enter 1 or 2.");
         }
-
-        System.out.println("Enter the file path to write the output: ");
-        String outFilePath=in.nextLine();
-        System.out.println("Enter the output delimeter (If nothing entered, input delimeter will be used): ");
-        if(in.nextLine()!=null) {
-            delim = in.next().charAt(0);
-        } else {
-            delim = ',';
-        }
         
         in.close();
     }
