@@ -62,7 +62,7 @@ class Coordination implements UserToCompute {
 
     public List<Integer> computeRequest(List<Integer> input) {
         in = input;
-
+        /*
         //Multithreading this program doesnt do much,
         //maybe better to have this method input just a single int
         //then each thread can run each int in the list, optimizing it
@@ -89,7 +89,8 @@ class Coordination implements UserToCompute {
                 throw new RuntimeException(e);
             }
         });
-
+        */
+        out = computeAPI.compute(in);
 
         return out;
     }
