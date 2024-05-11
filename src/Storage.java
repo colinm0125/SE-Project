@@ -59,6 +59,13 @@ class Storage implements DataToFromCompute {
 
         while(in.hasNextLine()) {
             String line=in.nextLine();
+
+            // Not entirely sure what this means, I believe it has something to do with file encoding or file types,
+            // saw this symbol in error logs and tried this and it fixed issue so am keeping it here!
+            if (line.startsWith("\uFEFF")) {
+                line = line.substring(1);
+            }
+            
             String[] temp=line.split(",");
             for(String hold : temp)  {
                 result.add(Integer.parseInt(hold.trim()));
